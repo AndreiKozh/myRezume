@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style-type: none;
+}
+
+.top {
+    background: #3a3839;
+    padding: 15px 0;
+}
+
+.top>div>div {
+    justify-content: space-between;
+}
+
+.top .button_nav {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #a7a7a7;
+    background: #3a3839;
+    cursor: pointer;
+    margin: 0;
+    z-index: 25;
+    float: right;
+    position: fixed;
+    top: 17.5px;
+    right: 15px;
+}
+
+.button_nav::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 25px;
+    top: 8px;
+    left: 4px;
+    background: #a7a7a7;
+}
+
+.button_nav::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 25px;
+    top: 24px;
+    left: 4px;
+    background: #a7a7a7;
+}
+
+.button_nav>span {
+    position: relative;
+}
+
+.button_nav>span::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 25px;
+    top: 16px;
+    left: 4px;
+    background: #a7a7a7;
+}
+
+
+.top nav {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 20;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 75px 0 0;
+    transition: right 0.8s ease;
+    display: block;
+    right: -100%;
+}
+
+.top .move {
+    right: 0;
+}
+
+.top nav>a {
+    color: #a7a7a7;
+}
+
+.top nav>a:hover {
+    background: #443200;
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+    .top>div {
+        max-width: none;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    
+    .top .button_nav {
+        display: none;
+    }
+
+    .top nav {
+        position: static;
+        background: transparent;
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 0 0;
+        height: auto;
+    }
+
+    .top nav a {
+        padding: 0;
+        margin: 0 0 0 15px;
+    }
+
+    .top nav a:hover {
+        background: transparent;
+        color: #a58632;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    .top>div {
+        max-width: 755px;
+    }
+
+}
+
+
+
+
+.main {
+    background: #f4f4f4;
+    padding: 20px 0 20px;
+}
+
+.main h1 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 27px
+}
+
+.main img {
+    width: 100%;
+    box-shadow: 2px 3px 3px 4px rgba(0,0,0,0.5);
+    max-width: 300px;
+    margin: 15px 0 20px;
+}
+
+.main>div>div div {
+    text-align: center;
+}
+
+.main>div>div>div+div+div>div>div {
+    background: #3a3839;
+    color: #f3f3f3;
+    margin: 10px 0 0;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.main>div>div>div+div+div>div>div>div>div {
+    text-align: left;
+}
+
+.main>div>div>div+div+div>div>div>div>div h2 {
+    font-size: 20px;
+    padding: 3px 0 7px;
+    margin: 0;
+    font-family: 'Slabo 27px', serif;
+    color: #dedede;
+}
+
+.main>div>div>div+div+div>div>div>div>div:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #dedede;
+    top: 0;
+    left: 14px;
+    right: 11px;
+}
+
+
+.main>div>div>div+div+div>div>div>div>div+div a {
+    width: 18px;
+    height: 18px;
+    border-bottom: 2px solid #dedede;
+    border-right: 2px solid #dedede;
+    display: block;
+    transform: rotate(-45deg);
+}
+
+.main .rotate_a {
+    transform: rotate(45deg);
+}
+
+.main>div>div>div+div+div>div {
+    margin: 0 -10px;
+}
+
+.main>div>div>div+div+div>div>div>div>div:nth-child(3) {
+    display: none;
+    margin: 5px 0 0;
+    position: relative;
+    padding: 15px 15px 0;
+    overflow: hidden;
+}
+
+.main>div>div>div+div+div>div>div>div>div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main>div>div>div+div+div>div>div>div>div:nth-child(1), .main>div>div>div+div+div>div>div>div>div:nth-child(2) {
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+    .main>div>div>div+div+div>div>div, .main>div>div>div+div+div>div>div>div>div h2 {
+        background: #f4f4f4;
+        color: #3a3839;
+    }
+
+    .main img {
+        position: sticky;
+        top: 20px;
+    }
+
+    .main>div>div>div+div+div>div>div>div>div:nth-child(3) {
+        display: block;
+    }
+
+    .main>div>div>div+div+div>div>div>div>div+div>a {
+        display: none;
+    }
+
+    .main>div>div>div:nth-child(2) {
+        text-align: right;
+    }
+}
+
+
+
+
+.geo {
+    background: #f4f4f4;
+    padding: 0;
+}
+
+.geo>div>div {
+    text-align: center;
+}
+
+.geo>div>div>h2 {
+    font-size: 27px;
+    margin: 25px 0 20px;
+    font-family: 'Slabo 27px', serif;
+}
+
+#map {
+    height: 350px;
+    width: 100%;
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.5);
+}
+
+
+
+.popup h2 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Slabo 27px', serif;
+}
+
+.popup adress {
+    color: #646464;
+    font-size: 12px;
+    font-family: 'Slabo 27px', serif;
+    font-weight: 400;
+}
+
+.popup {
+    width: 200px;
+    height: 200px;
+}
+
+.gm-style .gm-style-iw-c {
+    padding: 0;
+    left: -72px;
+    max-height: 200px!important;
+    max-width: 200px!important;
+}
+
+.gm-style .gm-style-iw-d {
+    overflow: hidden!important;
+    max-height: 200px!important;
+    max-width: 200px!important;
+}
+
+
+
+
+.bottom {
+    background: #3a3839;
+    padding: 15px 0;
+}
+
+.bottom>div>div>div+div {
+    text-align: center;
+}
+
+.bottom>div>div>div+div p {
+    color: #dedede;
+    margin: 0;
+}
+
+.bottom>div>div>div+div span {
+    color: #a58632;
+}
+
+.bottom>div>div>div a {
+    height: 35px;
+    width: 35px;
+    background: url('../images/social.jpg');
+    background-position: -4px 322px;
+    display: block;
+    border-radius: 50%;
+}
+
+.bottom>div>div>div ul>li:nth-child(2) a {
+    margin: 0 7px;
+    background-position: -57px 270px;
+}
+
+.bottom>div>div>div ul>li:nth-child(3) a {
+    background-position: 41px 321px;
+}
+
+.bottom>div>div>div ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 5px 0 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .bottom>div>div>div a:hover {
+        transform: rotate(45deg);
+    }
+}
+
+
